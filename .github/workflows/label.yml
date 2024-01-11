@@ -6,8 +6,12 @@
 # https://github.com/actions/labeler
 
 name: Labeler
-on: [pull_request_target]
-
+on:
+  workflow_run:
+    workflows: ["Demo1"]
+    types:
+      - completed
+      
 jobs:
   label:
 
