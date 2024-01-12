@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NEXUS_USERNAME: ${{ }}
-      NEXUS_PASSWORD: ${{ }}
-      PLATFORM_USERNAME: ${{ }}
-      PLATFORM_PASSWORD: ${{ }}
-      SANDBOX_CLIENT_ID: ${{ }}
-      SANDBOX_CLIENT_PASSWORD: ${{ }}
+      NEXUS_USERNAME: ${{ secret.NEXUS_USERNAME }}
+      NEXUS_PASSWORD: ${{ secret.NEXUS_PASSWORD }}
+      PLATFORM_USERNAME: ${{ secret.PLATFORM_USERNAME }}
+      PLATFORM_PASSWORD: ${{ secret.PLATFORM_PASSWORD }}
+      SANDBOX_CLIENT_ID: ${{ secret.SANDBOX_CLIENT_ID }}
+      SANDBOX_CLIENT_PASSWORD: ${{ secret.SANDBOX_CLIENT_PASSWORD }}
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
     steps:
